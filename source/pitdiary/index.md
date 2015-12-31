@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: "pitdiary"
-title: "撸代码会死星人—-—前端爬坑日记"
+title: "撸代码会死星人—-—爬坑日记"
 noDate: "true"
 ---
 <!-- ### 你猜我爬坑爬出来没有？
