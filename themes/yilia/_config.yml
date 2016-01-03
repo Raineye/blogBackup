@@ -3,7 +3,7 @@ menu:
   主页: /
   所有文章: /archives
   爬坑日记: /pitdiary
-  #关于: /about
+  关于: /about
   #相册: /instagram
 
 #####
@@ -35,10 +35,10 @@ open_in_new: false
 
 # Miscellaneous
 google_analytics: ''
-favicon: /favicon.png
+favicon: http://7xpp66.com1.z0.glb.clouddn.com/blog/img/20150718184411_uKcTn.thumb.700_0.jpeg
 
 #你的头像url
-avatar: http://i4.tietuku.com/12bd8fab15e40888.jpg
+avatar: http://7xpp66.com1.z0.glb.clouddn.com/blog/img/20150718184411_uKcTn.thumb.700_0.jpeg
 #是否开启分享
 share_jia: true
 share_addthis: false

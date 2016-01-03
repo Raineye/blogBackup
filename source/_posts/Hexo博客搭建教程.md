@@ -66,7 +66,7 @@ Windows去下载[gitBash](http://git-scm.com/download/),至于怎么安装自己
 1.新建一个仓库
 填写好仓库信息，最好取一个有意义的名字`<repositoryName>`**未来你的博客域名会是`<repositoryName>.gitcafe.io`**
 
-![图片走丢了](http://i4.tietuku.com/7b430a0d9af02695.png)
+![图片走丢了](http://7xpp66.com1.z0.glb.clouddn.com/blog/img/20160101.png)
 
 2.在项目中增加hexo-deployer-git
 
