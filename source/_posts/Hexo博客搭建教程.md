@@ -18,47 +18,42 @@ Windows去下载[gitBash](http://git-scm.com/download/),至于怎么安装自己
 去[node官网下载](https://nodejs.org/en/download/)下载node安装包安装
 
 3. 用npm获取hexo的套件
-
-
-	$ npm -g install hexo
-
+```
+$ npm -g install hexo
+```
 ### 创建hexo博客
 1. 初始化博客
-
-
-	$ hexo init <folder>
-
+```
+$ hexo init <folder>
+```
 `<folder>`即你要创建博客的文件夹，你同样可以省略它在当前目录建立博客
 
 2. 生成静态网站
-
-
-	$ hexo generate
-
+```
+$ hexo generate
+```
 3. 开启服务
-
-
-	$ hexo server
-
+```
+$ hexo server
+```
 服务会跑在本机localhost:4000
 
 ### 添加文章
 
 1. 使用命令
-
-
-	$ hexo new <title>	
-
+```
+$ hexo new <title>	
+```
 `<title>`是你文章的标题，然后hexo会帮你生成一个文件`<title>.md`在`<folder>/source/_posts/`下面,用markdown语言写就是了。markdown语言的语法可以去网上搜一下资料，十分简单。
 
 2.这里说明一下文章中简单的数据格式：
-
-	title: Hexo博客搭建教程 		//你的标题
-	date: 2015-12-30 16:38:02 	//文章创建的时间戳
-	tags:						//文章的标签可以添加多个
-		- hexo
-		- git
-
+```
+title: Hexo博客搭建教程 		//你的标题
+date: 2015-12-30 16:38:02 	//文章创建的时间戳
+tags:						//文章的标签可以添加多个
+	- hexo
+	- git
+```
 ### 使用gitcafe托管静态博客
 
 首先,你需要注册一个 [gitcafe](https://gitcafe.com) 账号,<username>可以起一个自己喜欢的。
@@ -73,17 +68,17 @@ Windows去下载[gitBash](http://git-scm.com/download/),至于怎么安装自己
 	$ npm install hexo-deployer-git --save
 
 然后修改配置文件`<frlder>/_config.yml`
-
-	deploy:
-	  	type: git
-	  	repository: git@gitcafe.com:<username>/<repositoryName>.git
-	  	branch: gitcafe-pages
-	  	message: Site updated
-
+```
+deploy:
+	type: git
+	repository: git@gitcafe.com:<username>/<repositoryName>.git
+	branch: gitcafe-pages
+	message: Site updated
+```
 3.发布你的网站
-
-	$ hexo deploy
-
+```
+$ hexo deploy
+```
 3.好了，现在可以访问`<repositoryName>.gitcafe.io`来查看你的网站了 
 
 
