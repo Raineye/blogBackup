@@ -9,10 +9,6 @@ noDate: "true"
 ![图片好像失踪了](http://7xpp66.com1.z0.glb.clouddn.com/blog/img/382b5de7cbf22e47s.jpg)   
 
 <!-- more -->
-<br/>
-     
- ### 2016.1.4
- 在没确认接口之前，一定记得要灵活的写你的程序！！！
 
 <br/>
      

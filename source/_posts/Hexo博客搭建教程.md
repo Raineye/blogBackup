@@ -4,7 +4,7 @@ tags:
 	- hexo
 ---
 
-### [hexo](https://github.com/hexojs/hexo)是一款基于Node.js的静态博客框架。目前在GitHub上已有7857 star 和 1308 fork。
+[hexo](https://github.com/hexojs/hexo)是一款基于Node.js的静态博客框架。目前在GitHub上已有7857 star 和 1308 fork。
 
 <!-- more -->
 
