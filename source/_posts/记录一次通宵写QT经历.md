@@ -31,13 +31,13 @@ tags:
 ### 关于信号槽
 在代码中使用`ui->objectName`可以调用ui界面中设计的控件，现在可以给按钮添加事件了。
 首先在头文件中声明槽函数
-```
+```c++
 public slots:
     void openEnd();
     void openselect();
 ```
 然后在主文件中实现这个函数，我以`openEnd()`为例
-```
+```c++
 void MainWindow::openEnd(){
     endWindow *w = new endWindow();
     w->show();
@@ -45,7 +45,7 @@ void MainWindow::openEnd(){
 ```
 这里`endWindow`是我在工程中添加的一个新的`endWindow`类，可以右键点击你的工程目录->选择添加新文件->QT->设计师界面类然后记得勾选添加新UI。
 现在槽函数声明好了，就要将谁发送信号和谁接受信号告诉计算机。
-```
+```c++
 connect(ui->selectButton,SIGNAL(clicked()),this,SLOT(openselect()));
 ```
 让我们来解析一下这四个参数
@@ -61,7 +61,7 @@ connect(ui->selectButton,SIGNAL(clicked()),this,SLOT(openselect()));
 ### 关于QSqlTableModel
 这是QT提供的一个动态链接数据库单表的类，它能够帮助我们很简单的实现对数据库的增删查改操作，而不用通过SQL去操纵数据库，对于这晚的我来说简直是一个完美的工具。
 首先使用`QSqlTableModel`要让程序和一个数据库建立链接
-```
+```c++
 bool createConnection()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -73,13 +73,13 @@ bool createConnection()
 }
 ```
 然后声明一个QSqlTableModel类的实例并关联数据库的一张表
-```
+```c++
 QSqlTableModel *menuModel new QSqlTableModel(this);
 menuModel = new QSqlTableModel(this);
 menuModel->setTable("menu");//关联menu表
 ```
 最后你可以把这个表的数据绑定到界面上一个tableview上
-```
+```c++
     menuModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
     menuModel->select();
     ui->menuTableView->setModel(menuModel);
