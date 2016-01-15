@@ -11,7 +11,7 @@ menu:
 subnav:
   github: "https://github.com/Raineye"
   weibo: "http://weibo.com/2940899633/profile?topnav=1&wvr=6&is_all=1"
-  #rss: /atom.xml
+  rss: /atom.xml
   zhihu: "https://www.zhihu.com/people/xue-bing-9"
   #douban: "#"
   #mail: "#"
