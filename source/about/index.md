@@ -35,7 +35,7 @@ noDate: "true"
 		"system":{
 			"windows":"***",
 			"linux":"**",
-			"os":"*"
+			"mac_os":"*"
 		},
 		"other":{
 			"c":"***",
