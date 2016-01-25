@@ -1,6 +1,7 @@
 title: 投身atom编辑器
 date: 2016-01-16 14:58:23
 tags:
+    -atom
 ---
 Atom开源了将近一年半的时间，但一直在用Sublime。今天试着玩了一下Atom编辑器，然后就完全停不下来了。正如它宣传的那样：“A hackable text editor for the 21st Century”。
 <!-- more -->

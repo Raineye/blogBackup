@@ -1,4 +1,55 @@
 #container{
+	.like-button{
+		width: 30%;
+		height: 30px;
+		border: 0px;
+		background-color: #E4E4E4;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+		outline: none;
+		cursor: pointer;
+	}
+
+	.rubberBand-button{
+		-webkit-animation:rubberBand 1s infinite  /*Safari and Chrome*/
+	}
+
+	@-webkit-keyframes rubberBand {
+	  from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	  }
+
+	  30% {
+		-webkit-transform: scale3d(1.25, 0.75, 1);
+		transform: scale3d(1.25, 0.75, 1);
+	  }
+
+	  40% {
+		-webkit-transform: scale3d(0.75, 1.25, 1);
+		transform: scale3d(0.75, 1.25, 1);
+	  }
+
+	  50% {
+		-webkit-transform: scale3d(1.15, 0.85, 1);
+		transform: scale3d(1.15, 0.85, 1);
+	  }
+
+	  65% {
+		-webkit-transform: scale3d(.95, 1.05, 1);
+		transform: scale3d(.95, 1.05, 1);
+	  }
+
+	  75% {
+		-webkit-transform: scale3d(1.05, .95, 1);
+		transform: scale3d(1.05, .95, 1);
+	  }
+
+	  100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	  }
+	}
+
 	position:relative;
 	min-height:100%;
 	#mobile-nav{
@@ -16,6 +67,7 @@
 		}
 		#header{
 			padding: 10px 0 0 0;
+			text-align: center;
 			.profilepic{
 				display: block;
 				position: relative;
@@ -24,6 +76,7 @@
 			.header-menu{
 				height: auto;
 				margin: 10px;
+				min-height:0px;
 				ul{
 					text-align: center;
 					cursor: default;
@@ -67,7 +120,7 @@
 	}
 
 	@media screen and (max-width:1040px) {
-		
+
 	}@media screen and (max-width:800px) {
 		@import "_partial/mobile"
 	}
@@ -153,13 +206,14 @@
 		position: relative;
 		width: 100%;
 		overflow: hidden;
-		min-height: 500px;
+		min-height: 255px;
 		font-size: 14px;
 		.switch-wrap{
 			transition: transform .3s ease-in;
 			position: relative;
 		}
 	}
+
 	.turn-left{
 	    transform: translate(-100%, 0 );
 	}
