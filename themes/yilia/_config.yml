@@ -6,7 +6,7 @@ menu:
   关于: /about
   #相册: /instagram
 
-#####
+
 # SubNav
 subnav:
   github: "https://github.com/Raineye"
@@ -50,12 +50,11 @@ tagcloud: true
 
 #是否开启友情链接
 #不开启——
-friends: false
+#friends: false
 #开启——
 friends:
   Season's neko: http://xnix.me/
   Nick's Blog: http://nick930826.github.io/
-
 
 #是否开启“关于我”。
 #不开启——
