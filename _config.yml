@@ -67,7 +67,7 @@ time_format: HH:mm:ss
 # Pagination 分页
 ## Set per_page to 0 to disable pagination
 #每10页分割一次
-per_page: 9 
+per_page: 9
 
 pagination_dir: page
 
@@ -78,8 +78,14 @@ theme: yilia
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
+# deploy:
+#   type: git
+#   repository: https://git.coding.net/rainey/blog.git
+#   branch: master
+#   message: Site updated{{ now("YYYY-MM-DD HH:mm:ss") }}
+
 deploy:
   type: git
-  repository: git@gitcafe.com:Rainey/rainey.git
-  branch: gitcafe-pages
+  repository: git@github.com:Raineye/raineye.github.io.git
+  branch: master
   message: Site updated{{ now("YYYY-MM-DD HH:mm:ss") }}

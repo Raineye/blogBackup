@@ -1,4 +1,4 @@
-title: 前端自动化构建——gulp
+title: 前端自动化构建之gulp篇
 date: 2016-01-29 11:32:03
 tags:
 	- 前端
