@@ -44,9 +44,9 @@ tags:
 接下来看一段代码执行过程中他们是如何进行交流
 代码：
 
-```
+```JavaScript
 function foo(a) {
-    console.log( a ); // 2
+  console.log( a ); // 2
 }
 
 foo( 2 );
@@ -101,7 +101,7 @@ foo( 2 );
 
 > 全局变量会自动成为全局对象（比如浏览器中的`window`对象）的属性。
 
-```
+```JavaScript
 var a = 1;
 
 function fun1() {
@@ -142,14 +142,12 @@ function fun2() {
 
 - 为了不污染全局作用域，可以将代码写入一个匿名函数中调用
 
-	```
+	```JavaScript
 	var a = 2;
 
 	(function() {
-
-	    var a = 3;
-	    console.log( a ); // 3
-
+	  var a = 3;
+	  console.log( a ); // 3
 	})();
 
 	console.log( a ); // 2
@@ -159,7 +157,7 @@ function fun2() {
 
 - let
 
-	```
+	```JavaScript
 	{
 	  let a = 10;
 	  var b = 1;
@@ -170,15 +168,14 @@ function fun2() {
 	```
 - const
 
-	```
+	```JavaScript
 	var foo = true;
 
 	if (foo) {
-	    var a = 2;
-	    const b = 3; // 包含在if中的块作用域常量
-
-	    a = 3; // 正常!
-	    b = 4; // 错误!
+	  var a = 2;
+	  const b = 3; // 包含在if中的块作用域常量
+	  a = 3; // 正常!
+	  b = 4; // 错误!
 	}
 
 	console.log( a ); // 3

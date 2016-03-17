@@ -14,100 +14,100 @@ tags:
 
 ### 4.2	编译器再度来袭
 
-```
+```JavaScript
 foo();
 function foo(){
-	console.log(a);//undefined
-	var a =2;
+  console.log(a);//undefined
+  var a =2;
 }
 ```
 显然这段代码的结果告诉我们，在引擎处理这段代码的时候，只是将声明提升了，但是表达式并没有被提升。
 它被引擎理解成了下面这段代码：
 
-```
+```JavaScript
 function foo(){
-	var a;
-	console.log(a);
-	a = 2;
+  var a;
+  console.log(a);
+  a = 2;
 }
 foo();
 ```
 下面再来看一段代码：
 
-```
+```JavaScript
 foo();//TypeError!
 bar();//ReferenceError!
 var foo = function bar(){
-	//...
+  //...
 }
 ```
 这段代码中的变量标识符`foo()`被提升并分配给所在作用域，因此`foo()`不会导致`ReferenceError`。但是foo此时没有被赋值，它的默认值为`undefined`，对它进行函数调用而导致非法操作，因此会抛出`TypeError`异常。
 而`bar()`函数是一个带名字的匿名函数，所以它只能在内部作用域使用，所以在外部作用域会由于导致`ReferenceError`（引用错误）
 这段代码会被引擎理解成以下形式：
 
-```
+```JavaScript
 var foo;
 
 foo();
 bar();
 
 foo = function(){
-	var bar = ..self..
+  var bar = ..self..
 }
 ```
 ### 4.3函数优先
 在多个“重复”声明的代码中，函数会首先被提升，然后才是变量。
 考虑以下代码：
-```
+```JavaScript
 foo();//1
 var foo;
 function foo(){
-	console.log('1');
+  console.log('1');
 }
 foo = function(){
-	console.log('2');
+  console.log('2');
 }
 foo();//2
 ```
 尽管`var foo`出现在了`function foo()...`的声明之前，但是它是重复声明，因此它会被忽略，因为函数声明会被提升到普通变量之前。它会被引擎理解成如下形式：
-```
+```JavaScript
 function foo(){
-	console.log(1);
+  console.log(1);
 }
 foo();//1
 foo = function(){
-	console.log(2);
+  console.log(2);
 }
 foo();//2
 ```
 当你理解了这些以后，我们再来一段相关的代码：
-```
+```JavaScript
 foo();//3
 function foo(){
-	consloe.log(1);
+  consloe.log(1);
 }
 var foo = function(){
-	console.log(2);
+  console.log(2);
 }
 function foo(){
-	console.log(3);
+  console.log(3);
 }
 ```
 虽然这些听起来都是些无用的学院理论，但是它说明了除非你走投无路，不然千万不要在同一个作用域中重复定义，经常会导致各种奇怪的问题。
 
 ok,让我们再来加个餐，看以下代码：
-```
+```JavaScript
 function foo(){
-	a = 1;
+  a = 1;
 }
 foo();
 console.log(a);//1
 ```
 虽然你在`foo()`内部给`a`赋值，但是，它的声明却在外部作用域。首先，引擎会在`foo`内部作用域中查找是否有`a`这个变量，然后作用域告诉它没有找到，那么它就去`foo`的上层作用域去找，依然没有找到，这时它会声明一个变量`var a`在外部作用域，然后，返回这个变量给表达式赋值。所以此时，`a`其实是属于外部作用域的变量，所以`a`的值为1。
 如果我们把代码改成如下形式，那么便会抛出`ReferenceError`异常，即引用错误。
-```
+```JavaScript
 function foo(){
-	var a = 1;
+  var a = 1;
 }
 foo();
 console.log(a);//ReferenceError
@@ -125,15 +125,15 @@ console.log(a);//ReferenceError
 
 下面用一些代码来解释这个定义。
 
-```
+```JavaScript
 function foo(){
-	var a = 2;
+  var a = 2;
 
-	function bar(){
-		console.log(a);//2
-	}
+  function bar(){
+    console.log(a);//2
+  }
 
-	return bar;
+  return bar;
 }
 var baz = foo();
 baz();//2  这就是闭包的效果
@@ -148,11 +148,11 @@ baz();//2  这就是闭包的效果
 ### 5.4	循环和闭包
 来看一个例子：
 
-```
+```JavaScript
 for(var i = 1;i<=5;i++){
-	setTimeout(function timer(){
-		console.log(i);
-	},i*1000);
+  setTimeout(function timer(){
+    console.log(i);
+  },i*1000);
 }
 ```
 我们对这段代码的预期是分别输出1~5，每秒一次每次一个。
@@ -169,13 +169,13 @@ for(var i = 1;i<=5;i++){
 
 如何实现我们的预期呢，答案就是闭包。
 
-```
+```JavaScript
 for(var i = 1; i<=5; i++){
-	(function(j){
-		setTimeout(function timer(){
-			console.log(j);
-		},j*1000);
-	})(i)
+  (function(j){
+    setTimeout(function timer(){
+      console.log(j);
+    },j*1000);
+  })(i)
 }
 ```
 在迭代内使用IIFE会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的作用域封闭在每个迭代内部，每个迭代中都会有一个具有正确值的变量供我们访问。
@@ -190,11 +190,11 @@ for(var i = 1; i<=5; i++){
 
 如果不理解的话，我们来看另一个例子：
 
-```
+```JavaScript
 var isEnd = true;
 
 window.setTimeout(function () {
-	isEnd = false;//1s后，改变isEnd的值
+  isEnd = false;//1s后，改变isEnd的值
 }, 1000);
 
 //这个while永远的占用了js线程，所以setTimeout里面的函数永远不会执行
@@ -211,7 +211,7 @@ alert('end');
 
 我们来看一个模块的实现方式：
 
-```
+```JavaScript
 function CoolModule() {
     var something = "cool";
     var another = [1, 2, 3];
@@ -245,7 +245,7 @@ foo.doAnother();//1!2!3!
 
 #### 5.5.1	现代的模块机制
 
-```
+```JavaScript
 var MyModules = (function Manager() {
     var modules = {};
 
@@ -266,7 +266,7 @@ var MyModules = (function Manager() {
     };
 })();
 ```
-```
+```JavaScript
 MyModules.define( "bar", [], function() {
     function hello(who) {
         return "Let me introduce: " + who;
@@ -306,7 +306,7 @@ ES6中为模块增加了一级语法支持。但通过模块系统进行加载�
 
 例如：
 
-```
+```JavaScript
 //bar.js
 function hello(who){
 	return "Let me introduce:"+who;
@@ -315,7 +315,7 @@ function hello(who){
 export hello;
 ```
 
-```
+```JavaScript
 //foo.js
 //仅从"bar"模块中导入hello()
 import hello from "bar";
@@ -331,7 +331,7 @@ function awesome(){
 export awesome;
 ```
 
-```
+```JavaScript
 //导入完整的"foo"和"bar"模块
 module foo from "foo";
 module foo from "bar";
