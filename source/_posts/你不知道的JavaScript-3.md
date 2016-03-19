@@ -4,7 +4,12 @@ tags:
     - JavaScript
 ---
 
+《你不知道的JavaScript》上卷 阅读笔记
+
+本篇讲述：【this的那些事】【apply和call的用法】
+
 <!-- more -->
+
 # 第二部分	this和对象原型
 ## 第一章	关于`this`
 ### 1.1	为什么要用`this`
@@ -17,24 +22,22 @@ tags:
 
 ```JavaScript
 function baz(){
-	//当前调用栈是：baz
-	//因此当前调用位置是全局作用域
-console.log("baz");
-	bar();//<--bar的调用位置
+  //当前调用栈是：baz
+  //因此当前调用位置是全局作用域
+  console.log("baz");
+  bar();//<--bar的调用位置
 }
 function bar() {
-    // 当前调用栈是baz -> bar
-    // 因此，当前调用位置在baz中
-
-    console.log( "bar" );
-    foo(); // <-- foo的调用位置
+  // 当前调用栈是baz -> bar
+  // 因此，当前调用位置在baz中
+  console.log( "bar" );
+  foo(); // <-- foo的调用位置
 }
 
 function foo() {
-    // 当前调用栈是baz -> bar -> foo
-    // 因此，当前调用位置在bar中
-
-    console.log( "foo" );
+  // 当前调用栈是baz -> bar -> foo
+  // 因此，当前调用位置在bar中
+  console.log( "foo" );
 }
 
 baz(); // <-- baz的调用位置
@@ -45,9 +48,9 @@ baz(); // <-- baz的调用位置
 #### 2.2.1	默认绑定
 独立函数调用。可以把这条规则看做是无法应用其他规则时的默认规则。
 
-```
+```JavaScript
 function foo(){
-	console.log(this.a);
+  console.log(this.a);
 }
 
 var a = 1;
@@ -61,25 +64,25 @@ foo();
 
 **严格模式下与foo()的调用位置无关**
 
-```
+```JavaScript
 function foo(){
-	console.log(this.a);
+  console.log(this.a);
 }
 
 var a =2;
 
 (function(){
-	"use strict";
+  "use strict";
 
-	foo();//2
+  foo();//2
 })()
 ```
 
-```
+```JavaScript
 function foo(){
-	"use strict";
+  "use strict";
 
-	console.log(this.a);
+  console.log(this.a);
 }
 
 var a = 1;
@@ -89,14 +92,14 @@ foo();//TypeError:this is undefined
 #### 2.2.2	隐式绑定
 如果调用位置有上下文对象，或者说被某个对象拥有或者包含。那么这时候我们需要考虑一些问题。
 
-```
+```JavaScript
 function foo(){
-	console.log(this.a);
+  console.log(this.a);
 }
 
 var obj = {
-	a:2,
-	foo:foo
+  a:2,
+  foo:foo
 };
 
 obj.foo();//2
@@ -106,14 +109,14 @@ obj.foo();//2
 **隐式丢失**
 有些情况下`this`会丢失绑定对象，然后应用默认绑定，从而把`this`绑定到全局对象或者`undefined`上。
 
-```
+```JavaScript
 function foo(){
-	console.log(this.a);
+  console.log(this.a);
 }
 
 var obj = {
-	a:2,
-	foo:foo
+  a:2,
+  foo:foo
 };
 
 var bar = obj.foo;//函数别名
@@ -129,13 +132,13 @@ bar();//"oops,global"
 #### 2.2.3	显示绑定
 这里就涉及到了函数的两个方法：`call(...)`和`apply(...)`。它们的第一个参数是一个对象，它们会把函数的`this`绑定到这个对象上，因此我们称之为显示绑定。
 
-```
+```JavaScript
 function foo(){
-	console.log(this.a);
+  console.log(this.a);
 }
 
 var obj = {
-	a:2
+  a:2
 };
 
 foo.call(obj);//2
@@ -145,18 +148,18 @@ foo.call(obj);//2
 
 **硬绑定**
 
-```
+```JavaScript
 function foo(something) {
-    console.log( this.a, something );
-    return this.a + something;
+  console.log( this.a, something );
+  return this.a + something;
 }
 
 var obj = {
-    a:2
+  a:2
 };
 
 var bar = function() {
-    return foo.apply( obj, arguments );
+  return foo.apply( obj, arguments );
 };
 
 var b = bar( 3 ); // 2 3
@@ -166,14 +169,14 @@ console.log( b ); // 5
 
 由于硬绑定是一种常用的模式，所以ES5中提供了内置的方法`Function.prototype.bind`，他的用法如下：
 
-```
+```JavaScript
 function foo(something){
-	console.log(this.a,something);
-	return this.a + something;
+  console.log(this.a,something);
+  return this.a + something;
 }
 
 var obj = {
-	a:2
+  a:2
 };
 
 var bar = foo.bind(obj);
@@ -200,9 +203,9 @@ console.log(b);//5
 
 #### 2.2.4	`new`绑定
 
-```
+```JavaScript
 function foo(a){
-	this.a = a;
+  this.a = a;
 }
 
 var bar = new foo(2);
@@ -215,26 +218,25 @@ console.log(bar.a);//2
 判断`this`
 
 1. 函数是否在`new`中调用（`new`绑定）？如果是的话`this`绑定的是新创建的对象。
-	
-	```
+
+	```JavaScript
 	var bar = new foo();
 	```
-	
+
 2. 函数是否通过`call` `apply`（显示绑定）或者硬绑定调用？如果是的话，`this`绑定的是指定的对象。
 
-	```
+	```JavaScript
 	var bar = foo.call(obj2);
 	```
 
 3. 函数是否在某个上下文对象中调用（饮食绑定）？如果是的话，`this`绑定的是那个上下文对象。
 
-	```
+	```JavaScript
 	var bar = obj1.foo();
 	```
 
 4. 如果都不是的话，使用默认绑定。如果是严格模式，就绑定到`undefined`，否则就绑定到全局对象。
 
-	```
+	```JavaScript
 	var bar = foo();
 	```
-	
