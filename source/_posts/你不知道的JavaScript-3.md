@@ -2,6 +2,8 @@ title: 你不知道的JavaScript(3)
 date: 2016-03-18 09:03:56
 tags:
     - JavaScript
+    - ReadingNotes
+    - 《你不知道的JavaScript》
 ---
 
 《你不知道的JavaScript》上卷 阅读笔记
@@ -11,10 +13,11 @@ tags:
 <!-- more -->
 
 # 第二部分	this和对象原型
+<!--
 ## 第一章	关于`this`
 ### 1.1	为什么要用`this`
 
-
+ -->
 
 ## 第二章	`this`全面解析
 ### 2.1	调用位置
