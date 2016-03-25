@@ -7,7 +7,8 @@ noDate: "true"
 ![图片好像失踪了](http://7xpp66.com1.z0.glb.clouddn.com/blog/img/382b5de7cbf22e47s.jpg)   
 
 <!-- more -->
-```
+
+```Javascript
 {
 	"name":"Rainey",
 	"description":""，
@@ -17,25 +18,25 @@ noDate: "true"
 		}
 		"frontEnd":{
 			"Javascript":{
-				"angular":"***",
-				"reactjs":"*",
-				"ionic":"**",
+				"angular":"****",
+				"reactjs":"**",
+				"ionic":"***",
 				"bootstrap":"**",
 				"Typescript":"*",
 				"angular2":"*"
 			},
-			"Css3":"***",
-			"Html5":"***"
+			"Css3":"****",
+			"Html5":"****"
 		},
 		"backEnd":{
 			"nodejs":"**",
-			"php":"**",
+			"php":"*",
 			"java":"*"
 		},
 		"system":{
 			"windows":"***",
-			"linux":"**",
-			"mac_os":"*"
+			"linux":"*",
+			"mac_os":"**"
 		},
 		"other":{
 			"c":"***",
