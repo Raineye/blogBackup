@@ -6,10 +6,18 @@ tags:
 
 ionic2.0@beta版本文档整理
 
+
+
+
+
 <!-- more -->
 
-# ionic 2.0文档整理
-## ActionSheet
+*本文档不是英文文档的完全翻译，是个人的阅读笔记。如果阅读后有不明白或者不懂，[请移步原文阅读](http://ionicframework.com/docs/v2/api/)。
+如果本文有错误，请在本页末尾留言或者提交[Issues](https://github.com/Raineye/blogBackup/issues)。*
+
+*您可以点击小标题跳转到相应的ionic2英文文档。*
+
+## [ActionSheet](http://ionicframework.com/docs/v2/api/components/action-sheet/ActionSheet/)
 ActionSheet是一个对话框，让用户选择一个选项。而且用户必须要选择其中一个选项才能恢复与应用程序的交互（点击背景会执行`cancle`的事件）。当然也可以利用背景或者后退键来取消对话框从而恢复和程序的交互。
 
 ActionSheet会从一个数组创建它的按钮选项。每一个按钮都拥有一些属性，例如`text` `handler` `role` 等等。如果`handler`返回`false`时，ActionSheet将不会被销毁。ActionSheet还可以选择有一个标题和副标题。
@@ -55,69 +63,43 @@ ActionSheet会从一个数组创建它的按钮选项。每一个按钮都拥有
 ### 静态方法
 
 #### create(opts)
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| title	           | `string`      |ActionSheet的标题    |
+| subTitle| `string`|ActionSheet的副标题|
+| cssClass|`string`|自定义样式的css类|
+| enableBackdropDismiss|`boolean`|用户点击背景是否关闭ActionSheet|
+| buttons|`array<any>`|显示的按钮的数组|
 
-- title `string`
-
-	ActionSheet的标题
-
-- subTitle `string`
-
-	ActionSheet的副标题
-
-- cssClass `string`
-
-	自定义样式的css类
-
-- enableBackdropDismiss `boolean`
-
-	用户点击背景是否关闭ActionSheet
-
-- buttons `array<any>`
-
-	显示的按钮的数组
 
 **按钮的属性**
 
-- text `string`
-
-	按钮上显示的文字
-
-- icon `icon`
-
-	按钮上显示的图标
-
-- handler `any`
-
-	点击后执行的函数
-
-- cssClass `stirng`
-
-- role `string`
-
-	如何显示按钮，`destructive`或者`cancel`。如果没有设置此选项，那么将显示默认的按钮。
-
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| text|`string`|按钮上显示的文字|
+| icon|`icon`|按钮上显示的图标|
+| handler|`any`|点击后执行的函数|
+| cssClass|`stirng`|
+|role|`string`|如何显示按钮，`destructive`或者`cancel`。如果没有设置此选项，那么将显示默认的按钮。|
 ### 实例方法
 
 #### `setTitle(title)`
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| title |`string`|设置ActionSheet的标题|
 
-- title `stirng`
-
-	设置ActionSheet的标题
-
-#### `setSubTitle(subTitle)
-
-- title `stirng`
-
-	设置ActionSheet的子标题
+#### `setSubTitle(subTitle)`
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| subTitle |`string`|设置ActionSheet的子标题|
 
 #### `addButton(button)`
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| button |`object `| ActionSheet的按钮。 |
 
-- button `object`
 
-	ActionSheet的按钮。
-
-
-## Alert
+## [Alert](http://ionicframework.com/docs/v2/api/components/alert/Alert/)
 
 Alert是一个对话框，可以向用户提供信息或者收集用户输入的信息。同样用户必须点击某个按钮才能销毁这个对话框。
 
@@ -205,56 +187,37 @@ presentPrompt() {
 
 Alert选项
 
-- title `string`
-- subTitle `string`
-- message `string`
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| title|`string`|
+| subTitle |`string`|
+| message |`string`|Alert显示的信息|
+| cssClass|`string`|
+| inputs|`array`|Alert显示的输入框数组|
+| buttons|`array`|
+| enableBackdropDismiss|`boolean`|点击背景是否销毁Alert|
 
-	Alert显示的信息
-
-- cssClass `string`
-- inputs `array`
-
-	Alert显示的输入框数组
-
-- buttons `array`
-- enableBackdropDismiss `boolean`
-
-	点击背景是否销毁Alert
 
 Input选项
 
-- type `string`
-
-	input的类型，例如：text、tel、number等等
-
-- name `string`
-- placeHolder `string`
-
-	input的占位符，未输入时的提示信息。
-
-- value `string`
-
-	checkbox的值
-
-- label `string`
-
-	checkbox显示的文字
-
-- checked `boolean`
-
-	是否选中
-
-- id `string`
-
-	input的标识
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| type|`string`|input的类型，例如：text、tel、number等等|
+| name|`string`|
+| placeHolder|`string`|input的占位符，未输入时的提示信息。|
+| value|`string`|checkbox的值|
+| label|`string`|checkbox显示的文字|
+| checked|`boolean`|是否选中|
+| id|`string`|input的标识|
 
 Button的选项
 
-- text `string`
-- handler `any`
-- cssClass `string`
-- role `string`
-	`null`或者`cancel`
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| text|`string`|
+| handler |`any `|
+| cssClass |`string`|
+| role |`string`|`null`或者`cancel`
 
 ### 实例方法
 
@@ -274,7 +237,7 @@ Button的选项
 
 	添加css class 到alert的外层。
 
-## App
+## [App](http://ionicframework.com/docs/v2/api/decorators/App/)
 
 app是一个ionic的装饰器，它可以启动应用。通过一系列的参数作为应用程序的全局配置变量。`@App`可以接受一个模板属性或者一个模板地址。
 
@@ -293,21 +256,17 @@ export class MyApp{
 
 ### 属性
 
-- config `object`
+| 属性名称          | 类型           |描述                 |
+| -------------    |:------------- |:-------------      |
+| config|`object`|app的配置信息|
+| prodMode|`boolean`|激活Angular的生产模式，在框架内关闭断言和其他检查。默认是`false`。
+| pipes|`array`
+| providers |`array`
+| template |`string `
+| templateUrl |`string `
 
-	app的配置信息
 
-- prodMode `boolean`
-
-	激活Angular的生产模式，在框架内关闭断言和其他检查。默认是`false`。
-
-- pipes `array`
-
-- providers `array`
-- template `string`
-- templateUrl `stirng`
-
-## Badges
+## [Badges](http://ionicframework.com/docs/v2/components/#badges)
 
 Badges是一种小部件，通常用于数值显示。
 
@@ -322,7 +281,7 @@ Badges是一种小部件，通常用于数值显示。
 Badges也可以给与颜色属性`<ion-badge secondary></ion-badge>
 `
 
-## Buttons
+## [Buttons](http://ionicframework.com/docs/v2/api/components/button/Button/)
 Button是ionic中的简单句子，可以显示文本、图标或者都显示。
 
 ### 属性
@@ -396,7 +355,7 @@ Button是ionic中的简单句子，可以显示文本、图标或者都显示。
 </button>
 ```
 
-## Cards
+## [Cards](http://ionicframework.com/docs/v2/components/#cards)
 Cards是一个css组件
 
 ### Card的组成
@@ -416,7 +375,7 @@ Cards是一个css组件
   </ion-card-content>
 </ion-card>
 ```
-## Checkbox
+## [Checkbox](http://ionicframework.com/docs/v2/api/components/checkbox/Checkbox/)
 
 复选框拥有一个布尔值来标记自己是否被选中，使用`checked`可以来默认选中复选框，使用`disabled`来禁用该复选框。
 
@@ -453,90 +412,30 @@ Cards是一个css组件
 
 	当复选框状态变化时触发
 
-## Config
+## [Config](http://ionicframework.com/docs/v2/api/config/Config/)
 用来配置整个应用程序。
 
 ### 属性
-- activator
 
-	ios:highlight
-	md:ripple
-
-
-- actionSheetEnter
-
-	ios:action-sheet-slide-in
-	md:action-sheet-md-slide-in
-
-- actionSheetLeave
-
-	ios:action-sheet-slide-out
-	md:action-sheet-md-slide-out
-
-- alertEnter
-
-	ios:alert-pop-in
-	md:alert-md-pop-in
-
-- alertLeave
-
-	ios:alert-pop-out
-	md:alert-md-pop-out
-
-- backButtonText
-
-	ios:Back
-
-- backButtonIcon
-
-	ios:ion-ios-arrow-back
-	md:ion-md-arrow-back
-
-- iconMode
-
-	ios:ios
-	md:md
-
-- menuType
-
-	ios:reveal
-	md:overlay
-
-- modalEnter
-
-	ios:modal-slide-in
-	md:modal-md-slide-in
-
-- modalLeave
-
-	ios:modal-slide-out
-	md:modal-md-slide-out
-
-- pageTransition
-
-	ios:ios-transition
-	md:md-transition
-
-- pageTransitionDelay
-
-	ios:16
-	md:120
-
-- tabbarPlacement
-
-	ios:bottom
-	md:top
-
-- tabbarHighlight		
-
-	md:top
-
-- tabbarLayout
-
-
-- tabSubPages		
-
-	md:true
+| 名称          | IOS默认           |MD默认                 |
+| -------------    |------------- |-------------      |
+|activator|	highlight	|ripple
+|actionSheetEnter|action-sheet-slide-in|action-sheet-md-slide-in
+|actionSheetLeave|action-sheet-slide-out|action-sheet-md-slide-out
+alertEnter|alert-pop-in	|alert-md-pop-in
+alertLeave|alert-pop-out|alert-md-pop-out
+backButtonText|	Back	
+backButtonIcon|	ion-ios-arrow-back|	ion-md-arrow-back
+iconMode|	ios	|md
+menuType	|reveal	|overlay
+modalEnter|	modal-slide-in|	modal-md-slide-in
+modalLeave|	modal-slide-out|	modal-md-slide-out
+pageTransition|	ios-transition|	md-transition
+pageTransitionDelay|	16|	120
+tabbarPlacement	|bottom|	top
+tabbarHighlight	|	|top
+tabbarLayout|		
+tabSubPages|		|true
 
 ### 实例方法
 
@@ -556,7 +455,7 @@ Cards是一个css组件
 
 	"ios"或者"android"
 
-## Content
+## [Content](http://ionicframework.com/docs/v2/api/components/content/Content/)
 Content组件提供了易于使用的方法来控制滚动，同时可以和其他组件配合实现下拉刷新和上拉加载的功能。
 
 ### 实例方法
@@ -590,7 +489,7 @@ Content组件提供了易于使用的方法来控制滚动，同时可以和其�
 #### `getContentDimensions()`
 获取content的尺寸
 
-## Events
+## [Events](http://ionicframework.com/docs/v2/api/util/Events/)
 Events是一个发布订阅式的事件系统。
 
 ```
@@ -628,7 +527,7 @@ events.subscribe('user:created', (user) => {
 
 将事件发布到给定的主题
 
-## Grid
+## [Grid](http://ionicframework.com/docs/v2/components/#grid)
 
 ionic基于flexbox制作了一套网格框架。
 
@@ -650,7 +549,7 @@ ionic基于flexbox制作了一套网格框架。
 
 用`offset`属性来设置列偏移（例如：`offset-25`）
 
-## HideWhen
+## [HideWhen](http://ionicframework.com/docs/v2/api/components/show-hide-when/HideWhen/)
 
 HideWhen用来设置某个平台或者某个屏幕方向时显示的元素。
 
@@ -676,7 +575,7 @@ HideWhen用来设置某个平台或者某个屏幕方向时显示的元素。
 </div>
 ```
 
-## Icon
+## [Icon](http://ionicframework.com/docs/v2/api/components/icon/Icon/)
 Icon会自动识别平台并使用该平台的设计Icon。
 
 ```
@@ -703,7 +602,7 @@ Icon会自动识别平台并使用该平台的设计Icon。
 
 	设置该图标是否是活跃的图标。一般会用在tabbar中来将选中的tab图标置为活跃。
 
-## Id
+## [Id](http://ionicframework.com/docs/v2/api/components/app/Id/)
 Id是一个应用程序中元素的唯一标识，可以通过它来获取到元素从而进行访问。
 
 ### 使用
@@ -729,7 +628,7 @@ ngAfterViewInit() {
 
 注意：不建议使用Id，因为不能保证注册组件所在的页面是否已经被销毁或者离开当前视图。
 
-## InfiniteScroll
+## [InfiniteScroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
 当用户滚动到页面底部时，可以通过InfiniteScroll执行一个动作。
 
@@ -815,10 +714,10 @@ export class NewsFeedPage {
 
 - infinite
 
-## Input
+## [Input](http://ionicframework.com/docs/v2/api/components/input/Input/)
 `ion-input`拥有很多文本类型，例如：`text` `password` `email` `number` `search` `tel` 和 `url`。
 
-## IonicApp
+## [IonicApp](http://ionicframework.com/docs/v2/api/components/app/IonicApp/)
 
 ### 实例方法
 
@@ -835,14 +734,14 @@ export class NewsFeedPage {
 
 获取给定键值的组件。
 
-## Item
+## [Item](http://ionicframework.com/docs/v2/api/components/item/Item/)
 Item的使用有三种方法：
 
 - 使用`<ion-item>`来创建一个不可点击文本。
 - 使用 `<button ion-item>`。通常这个元素会有一个(click)处理程序
 - 使用`<a ion-item>`当项目需要包含一个链接。
 
-## ItemSliding
+## [ItemSliding](http://ionicframework.com/docs/v2/api/components/item/ItemSliding/)
 创建一个可滑动的Item。
 
 ```
@@ -859,7 +758,7 @@ Item的使用有三种方法：
 </ion-list>
 ```
 
-## Keyboard
+## [Keyboard](http://ionicframework.com/docs/v2/api/util/Keyboard/)
 Keyboard允许你使用ionic键盘插件提供的键盘事件。
 
 ```
@@ -885,7 +784,7 @@ export class MyClass{
 
 	关闭键盘
 
-## List
+## [List](http://ionicframework.com/docs/v2/api/components/list/List/)
 ### 实例方法
 #### `enableSlidingItems(shouldEnable)`
 是否开启滑动。
