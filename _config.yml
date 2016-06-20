@@ -86,6 +86,6 @@ theme: next
 
 deploy:
   type: git
-  repository: git@github.com:XueRainey/blogBackup.git
+  repository: git@github.com:XueRainey/XueRainey.github.io.git
   branch: master
   message: Site updated{{ now("YYYY-MM-DD HH:mm:ss") }}
