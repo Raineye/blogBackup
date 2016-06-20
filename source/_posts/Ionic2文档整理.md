@@ -1,7 +1,13 @@
-# ionic2.0@beta版本文档整理
+title: ionic2文档整理
+date: 2016-04-06 19:18:33
+tags:
+    - ionic2
+---
 
 *本文档不是英文文档的完全翻译，是个人的阅读笔记。如果阅读后有不明白或者不懂，[请移步英文版阅读](http://ionicframework.com/docs/v2/api/)。
 如果本文有错误，请在本页末尾留言或者提交[Issues](https://github.com/Raineye/ionic2/issues)。*
+<!-- more -->
+
 
 *您可以点击小标题跳转到相应的ionic2英文文档。*
 
