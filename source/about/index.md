@@ -4,20 +4,21 @@ slug: "about"
 title: "关于"
 noDate: "true"
 ---
-![图片好像失踪了](http://7xpp66.com1.z0.glb.clouddn.com/blog/img/382b5de7cbf22e47s.jpg)   
 
 <!-- more -->
 
 ## 联系方式
 
 - 手机：15757821704
-- Emmail:xuebing_orz@icloud.com
+- Email:xuebing_orz@icloud.com
 - qq:515385036
+- 微信：xianmoxieyang
 
 ## 个人信息
 
 - 薛冰/男/1994
 - 本科/宁波大学科学技术学院
+- 毕业时间：2016年6月
 - 微博： [@XueRainey](http://weibo.com/XueRainey)
 - 技术博客： [http://rainey.space](http://rainey.space)
 - github: [https://github.com/XueRainey](https://github.com/XueRainey)
@@ -84,7 +85,7 @@ noDate: "true"
 
 ### Ionic
 
-使用Ionic2@Beta版本花费大约一个多星期开发了Conde社区的App。
+使用Ionic2@Beta版本花费大约一个多星期开发了Cnode社区的App。
 
 同时开发过三江购物B2B项目App。
 
