@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: image
-title: 城市记忆
+title: 摄影
 noDate: true
 ---
 
