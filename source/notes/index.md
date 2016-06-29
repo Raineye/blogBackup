@@ -1,8 +1,8 @@
 ---
 layout: post
-slug: "pitdiary"
-title: "阅读笔记"
-noDate: "true"
+slug: pitdiary
+title: 阅读笔记
+noDate: true
 ---
 
 ## 2016/3

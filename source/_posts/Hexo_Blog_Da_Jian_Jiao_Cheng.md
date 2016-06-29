@@ -42,7 +42,7 @@ $ hexo server
 
 1. 使用命令
 ```
-$ hexo new <title>	
+$ hexo new <title>
 ```
 `<title>`是你文章的标题，然后hexo会帮你生成一个文件`<title>.md`在`<folder>/source/_posts/`下面,用markdown语言写就是了。markdown语言的语法可以去网上搜一下资料，十分简单。
 
@@ -79,13 +79,4 @@ deploy:
 ```
 $ hexo deploy
 ```
-3.好了，现在可以访问`<repositoryName>.gitcafe.io`来查看你的网站了 
-
-
-
-
-
-
-
-
-
+3.好了，现在可以访问`<repositoryName>.gitcafe.io`来查看你的网站了
