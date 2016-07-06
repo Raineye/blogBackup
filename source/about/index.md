@@ -23,11 +23,11 @@ noDate: "true"
 - 技术博客： [http://rainey.space](http://rainey.space)
 - github: [https://github.com/XueRainey](https://github.com/XueRainey)
 - 期望职位： Web前端工程师
-- 期望城市： 北京/杭州
+- 期望城市： 杭州
 
-## 工作经历
+## 实习经历
 
-### 宁波三江购物俱乐部股份有限公司（2015年7月至今）
+### 宁波三江购物俱乐部股份有限公司（2015年7月至2016年5月）
 
 #### 新电商网购移动端网站
 
@@ -43,17 +43,17 @@ noDate: "true"
 
 ## 开源项目和作品
 
-### 1. Ionic2.0官方Api翻译
+### 1. Ionic2.0官方文档中文整理
 
-该项目截止到2016年5月4日，Star:73/Fork:16
+该项目截止到2016年7月5日，Star:104/Fork:24
 
 项目地址：[https://github.com/XueRainey/ionic2](https://github.com/XueRainey/ionic2)
 
 ### 2. Ioniclub
 
-使用Ionic2.0开发的Cnode社区移动App
+基于Ionic2.0开发的Cnode社区移动App
 
-该项目截止到2016年5月4日，Star:11/Fork:3
+该项目截止到2016年5月4日，Star:18/Fork:4
 
 项目地址：[https://github.com/XueRainey/Ioniclub](https://github.com/XueRainey/Ioniclub)
 
@@ -87,7 +87,7 @@ noDate: "true"
 
 使用Ionic2@Beta版本花费大约一个多星期开发了Cnode社区的App。
 
-同时开发过三江购物B2B项目App。
+同时开发过三江购物供货渠道分享App。
 
 ### 其他
 - 前端技能：TypeScript/Jquery/React(Redux)
@@ -95,6 +95,6 @@ noDate: "true"
 - 版本管理：Git
 
 
-## 自我简介
+# 自我简介
 
 一个积极的悲观主义者。十分喜欢轻松的写代码，喜欢任何美好的事物。从大三开始喜欢前端，所有的东西几乎都是通过自己自学摸索学来的。我其实喜欢的公司是那种十分有编程氛围的公司，轻松自由的写代码是我一直以来想要的。
