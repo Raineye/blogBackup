@@ -120,7 +120,7 @@ tags:
 
 # 这些盒子如何摆放呢？
 
-生成了这么多的盒子，那么我们需要把它们按照一定的规则摆放好，然后才能把整齐的盒子渲染成页面给用户看。盒子在摆放过程中，会通过盒的类型生成格式化上下文。也就是Formatting Context(块级格式化上下文)和Inline Formatting Context(行内格式化上下文)。
+生成了这么多的盒子，那么我们需要把它们按照一定的规则摆放好，然后才能把整齐的盒子渲染成页面给用户看。盒子在摆放过程中，会通过盒的类型生成格式化上下文。也就是Block Formatting Context（块级格式化上下文)和Inline Formatting Context(行内格式化上下文)。
 
 ## Block Formatting Context
 
