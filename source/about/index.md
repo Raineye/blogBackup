@@ -25,6 +25,7 @@ noDate: "true"
 - GitHub: [https://github.com/XueRainey](https://github.com/XueRainey)
 
 ## 工作经历
+
 - 宁波三江购物俱乐部股份有限公司（2015年7月至2016年5月）
 
 	- 新电商网购移动端网站
@@ -63,19 +64,19 @@ noDate: "true"
 
 - Ionic2.0官方文档中文整理
 
-项目地址： [GitHub - XueRainey/ionic2: 🚀 ionic2.0文档中文翻译](https://github.com/XueRainey/ionic2)
+    项目地址： [GitHub - XueRainey/ionic2: 🚀 ionic2.0文档中文翻译](https://github.com/XueRainey/ionic2)
 
 - Ioniclub
 
-基于Ionic2.0开发的Cnode社区移动App
+    基于Ionic2.0开发的Cnode社区移动App
 
-项目地址： [GitHub - XueRainey/Ioniclub: ❤️ Ioniclub is hybird mobile app of https://cnodejs.org , demo site(http://rainey.space/Ioniclub/)](https://github.com/XueRainey/Ioniclub)
+    项目地址： [GitHub - XueRainey/Ioniclub: ❤️ Ioniclub is hybird mobile app of https://cnodejs.org , demo site(http://rainey.space/Ioniclub/)](https://github.com/XueRainey/Ioniclub)
 
-演示地址：[http://fir.im/ioniclub](http://fir.im/ioniclub)
+    演示地址：[http://fir.im/ioniclub](http://fir.im/ioniclub)
 
 - crawl
 
-一个手动提取网页内容的插件保存到Bear或其他支持Url Scheme的任何本地软件。
+    一个手动提取网页内容的插件保存到Bear或其他支持Url Scheme的任何本地软件。
 
-项目地址： [GitHub - XueRainey/crawl: 🐞一个手动提取网页内容的插件](https://github.com/XueRainey/crawl)
+    项目地址： [GitHub - XueRainey/crawl: 🐞一个手动提取网页内容的插件](https://github.com/XueRainey/crawl)
 
