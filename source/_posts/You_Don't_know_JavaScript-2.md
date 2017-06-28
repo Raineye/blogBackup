@@ -1,9 +1,7 @@
 title: 你不知道的JavaScript(2)
 date: 2016-03-17 16:45:34
 tags:
-    - JavaScript
-    - ReadingNotes
-    - 《你不知道的JavaScript》
+    - 你不知道的JavaScript
 
 ---
 

@@ -1,5 +1,8 @@
-title: 如何建立自己的知识体系
-date: 2016-11-11 16:38:02
+layout:     post
+title:      如何建立自己的知识体系
+date:       2016-11-11 16:38:02
+author:     Rainey
+catalog:    true
 tags:
 	- 思考
 ---

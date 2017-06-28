@@ -1,7 +1,11 @@
-title: ionic2文档整理
-date: 2016-04-06 19:18:33
+layout:     post
+title:      ionic2文档整理
+date:       2016-04-06 19:18:33
+author:     Rainey
+catalog:    true
 tags:
     - ionic2
+    - 翻译
 ---
 
 *本文档不是英文文档的完全翻译，是个人的阅读笔记。如果阅读后有不明白或者不懂，[请移步英文版阅读](http://ionicframework.com/docs/v2/api/)。

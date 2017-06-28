@@ -1,9 +1,7 @@
 title: 你不知道的JavaScript(3)
 date: 2016-03-18 09:03:56
 tags:
-    - JavaScript
-    - ReadingNotes
-    - 《你不知道的JavaScript》
+    - 你不知道的JavaScript
 ---
 
 《你不知道的JavaScript》上卷 阅读笔记
