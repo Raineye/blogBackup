@@ -5,20 +5,29 @@ description: "Rainey's Photography"
 header-img: "img/photography-min.jpg"
 ---
 
-> 2016-6-17日 **那一天我们毕业了**
+> 2017-5-31 **泰国-普吉岛**
 
-![图片走丢了](http://7xpp66.com1.z0.glb.clouddn.com/1.jpg)
-![图片走丢了](http://7xpp66.com1.z0.glb.clouddn.com/2.jpg)
+![图片走丢了](Thailand/芭东海滩_1.jpg)
+![图片走丢了](Thailand/芭东海滩_2.jpg)
+![图片走丢了](Thailand/芭东海滩_3.jpg)
+![图片走丢了](Thailand/phuket.jpg)
+![图片走丢了](Thailand/Thailand_7.jpg)
+![图片走丢了](Thailand/Thailand_5.jpg)
+![图片走丢了](Thailand/Thailand_6.jpg)
 
 
-> 2016-11-27日 **东方明珠**
+> 2017-1-29 **钱塘江一隅**
 
-![图片走丢了](http://rainey.space/blogImg/20170410/4.jpg)
+![图片走丢了](HangZhou/钱塘江一隅.jpg)
 
-> 2016-12-7日 **秋**
 
-![图片走丢了](http://rainey.space/blogImg/20170410/2.jpg)
+> 2016-11-27 **东方明珠**
 
-> 2017-1-29日 **钱塘江一隅**
+![图片走丢了](ShangHai/ShangHai_1.jpg)
 
-![图片走丢了](http://rainey.space/blogImg/20170410/3.jpg)
+
+> 2016-6-17 **那一天我们毕业了**
+
+![图片走丢了](NingBo/NingBo_1.jpg)
+![图片走丢了](NingBo/NingBo_2.jpg)
+
