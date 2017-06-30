@@ -44,13 +44,18 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings
-disqus_username: hexo-theme-huxblog
+# disqus_username: hexo-theme-huxblog
 
 # Duoshuo settings
 # duoshuo_username: kaijun
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
+# Gitment settings
+gitment_username: XueRainey
+gitment_repo: blogBackup
+gitment_client_id: fba8f6853d509fb9511f
+gitment_client_secret: 799977f99237fd99cd6991f0e099327883848a34
 
 # Analytics settings
 # Baidu Analytics

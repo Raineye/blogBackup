@@ -1,7 +1,7 @@
 ---
 layout: image
 title: "PHOTOGRAPHY"
-description: "Rainey's Photography"
+description: "记忆"
 header-img: "img/photography-min.jpg"
 ---
 

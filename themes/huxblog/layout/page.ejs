@@ -1,6 +1,10 @@
 ---
 layout: layout
 ---
+
+<% if(config['gitment_username']) { %>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<% } %>
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>')">
     <div class="container">
@@ -79,18 +83,6 @@ layout: layout
                 <% if(page.comments) { %>
                     <hr>
 
-                    <% if(config['duoshuo_username']) { %>
-                    <!-- 多说评论框 start -->
-                    <div class="comment">
-                        <div class="ds-thread"
-                            data-thread-key="<%= page.path %>"
-                            data-title="<%= page.title %>"
-                            data-url="<%= page.permalink %>" >
-                        </div>
-                    </div>
-                    <!-- 多说评论框 end -->
-                    <% } %>
-
                     <% if(config['disqus_username']) { %>
                     <!-- disqus 评论框 start -->
                     <div class="comment">
@@ -99,26 +91,6 @@ layout: layout
                     <!-- disqus 评论框 end -->
                     <% } %>
 
-
-                    <% if(config['duoshuo_username']) { %>
-                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-                    <script type="text/javascript">
-                        // dynamic User by Hux
-                        var _user = '<%= config['duoshuo_username'] %>';
-
-                        // duoshuo comment query.
-                        var duoshuoQuery = {short_name: _user };
-                        (function() {
-                            var ds = document.createElement('script');
-                            ds.type = 'text/javascript';ds.async = true;
-                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                            ds.charset = 'UTF-8';
-                            (document.getElementsByTagName('head')[0]
-                             || document.getElementsByTagName('body')[0]).appendChild(ds);
-                        })();
-                    </script>
-                    <!-- 多说公共JS代码 end -->
-                    <% } %>
 
                     <% if(config['disqus_username']) { %>
                     <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
@@ -139,7 +111,10 @@ layout: layout
                     <!-- disqus 公共JS代码 end -->
                     <% } %>
 
-
+                    <!-- gitment 公共JS代码 start (一个网页只需插入一次) -->
+                    <% if(config['gitment_username']) { %>
+                        <div id="_gitment"></div>
+                    <% } %>
 
                 <% } %>
 
@@ -287,3 +262,19 @@ layout: layout
         <%} %>
     </div>
 </div>
+
+<% if(config['gitment_username']) { %>
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+        id: "<%= page.title %>", // 可选。默认为 location.href
+        owner: "<%= config['gitment_username'] %>",
+        repo: "<%= config['gitment_repo'] %>",
+        oauth: {
+            client_id: "<%= config['gitment_client_id'] %>",
+            client_secret: "<%= config['gitment_client_secret'] %>",
+        },
+    })
+    gitment.render('_gitment')
+    </script>
+<% } %>
