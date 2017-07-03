@@ -5,7 +5,7 @@ author:     Rainey
 catalog:    true
 comments: true
 tags:
-    - ionic2
+    - 前端开发
     - 翻译
 ---
 

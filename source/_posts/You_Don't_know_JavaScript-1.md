@@ -1,7 +1,7 @@
 title: 你不知道的JavaScript(1)
 date: 2016-03-16 13:57:42
 tags:
-    - 你不知道的JavaScript
+    - 读书笔记
 
 ---
 
