@@ -3,7 +3,7 @@ title:      ionic2文档整理
 date:       2016-04-06 19:18:33
 author:     Rainey
 catalog:    true
-comments: true
+comments:   true
 tags:
     - 前端开发
     - 翻译

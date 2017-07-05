@@ -1,5 +1,6 @@
-title: 你不知道的JavaScript(2)
-date: 2016-03-17 16:45:34
+title:      你不知道的JavaScript(2)
+date:       2016-03-17 16:45:34
+comments:   false
 tags:
     - 读书笔记
 ---

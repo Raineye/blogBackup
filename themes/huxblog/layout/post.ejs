@@ -9,7 +9,7 @@ layout: layout
         background-image: url('<%= page["header-img"] || config.root + config["header-img"] %>')
     }
 </style>
-<% if(config['gitment_username']) { %>
+<% if(page.comments && config['gitment_username']) { %>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <% } %>
 <header class="intro-header" >
@@ -62,7 +62,7 @@ layout: layout
                     <% } %>
                 </ul>
 
-                <% if(config['disqus_username']) { %>
+                <% if(page.comments && config['disqus_username']) { %>
                 <!-- disqus 评论框 start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
@@ -70,7 +70,7 @@ layout: layout
                 <!-- disqus 评论框 end -->
                 <% } %>
                 <!-- gitment 公共JS代码 start (一个网页只需插入一次) -->
-                <% if(config['gitment_username']) { %>
+                <% if(page.comments && config['gitment_username']) { %>
                     <div id="_gitment"></div>
                 <% } %>
 
@@ -130,7 +130,7 @@ layout: layout
 </article>
 
 
-<% if(config['disqus_username']) { %>
+<% if(page.comments && config['disqus_username']) { %>
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
@@ -148,7 +148,7 @@ layout: layout
 <% } %>
 
 <!-- gitment 公共JS代码 start (一个网页只需插入一次) -->
-<% if(config['gitment_username']) { %>
+<% if(page.comments && config['gitment_username']) { %>
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({

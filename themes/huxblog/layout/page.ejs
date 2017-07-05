@@ -2,7 +2,7 @@
 layout: layout
 ---
 
-<% if(config['gitment_username']) { %>
+<% if(page.comments && config['gitment_username']) { %>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <% } %>
 <!-- Page Header -->
@@ -83,7 +83,7 @@ layout: layout
                 <% if(page.comments) { %>
                     <hr>
 
-                    <% if(config['disqus_username']) { %>
+                    <% if(page.comments && config['disqus_username']) { %>
                     <!-- disqus 评论框 start -->
                     <div class="comment">
                         <div id="disqus_thread" class="disqus-thread"></div>
@@ -92,7 +92,7 @@ layout: layout
                     <% } %>
 
 
-                    <% if(config['disqus_username']) { %>
+                    <% if(page.comments && config['disqus_username']) { %>
                     <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
                     <script type="text/javascript">
                         /* * * CONFIGURATION VARIABLES * * */
@@ -112,7 +112,7 @@ layout: layout
                     <% } %>
 
                     <!-- gitment 公共JS代码 start (一个网页只需插入一次) -->
-                    <% if(config['gitment_username']) { %>
+                    <% if(page.comments && config['gitment_username']) { %>
                         <div id="_gitment"></div>
                     <% } %>
 
@@ -263,7 +263,7 @@ layout: layout
     </div>
 </div>
 
-<% if(config['gitment_username']) { %>
+<% if(page.comments && config['gitment_username']) { %>
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({

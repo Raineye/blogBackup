@@ -1,6 +1,6 @@
-title: NingJS · JSConf China · 2016
-date: 2016-09-5 10:18:33
-comments: true
+title:      NingJS · JSConf China · 2016
+date:       2016-09-5 10:18:33
+comments:   false
 tags:
     - JSConf
 ---
