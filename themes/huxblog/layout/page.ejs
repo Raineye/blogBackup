@@ -154,7 +154,15 @@ layout: layout
                         <% if(config['sidebar-about-description']) { %>
                             <p><%= config['sidebar-about-description'] %></p>
                         <% }%>
-
+                        <% if(config['sidebar-weixin']) { %>
+                            <p>Wechat: <%= config['sidebar-weixin'] %></p>
+                        <% }%>
+                        <% if(config['sidebar-qq']) { %>
+                            <p>QQ: <%= config['sidebar-qq'] %></p>
+                        <% }%>
+                        <% if(config['sidebar-mail']) { %>
+                            <p>Mail: <%= config['sidebar-mail'] %></p>
+                        <% }%>
                         <!-- SNS Link -->
                         <ul class="list-inline">
                             <% if (config.RSS) { %>
