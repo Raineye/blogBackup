@@ -69,7 +69,6 @@ ba_track_id: 624cf6c84d30a589d10085b74473beff
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "积极地悲观主义者"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-sidebar-weixin: xianmoxieyang
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
