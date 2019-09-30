@@ -146,6 +146,6 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://git.coding.net/rainey/blog.git
+  repository: https://e.coding.net/rainey/blog.git
   branch: master
   message: Site updated{{ now("YYYY-MM-DD HH:mm:ss") }}
